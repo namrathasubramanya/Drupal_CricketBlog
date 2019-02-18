@@ -1,0 +1,7 @@
+internsd8.interns:
+  path: /theinterns
+  defaults:
+    _controller: 'Drupal\internsd8\Controller\Internsd8Controller::interns'
+    _title: 'Internsd8Controller'
+  requirements:
+    _permission: 'access content'

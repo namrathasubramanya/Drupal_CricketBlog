@@ -1,0 +1,5 @@
+name: tableform
+type: module
+description: Creates a table form
+package: Custom
+core: 8.x

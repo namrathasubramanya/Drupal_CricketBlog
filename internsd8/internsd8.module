@@ -1,0 +1,20 @@
+<?php
+
+function internsd8_views_pre_render(&$view) {
+    if ($view->id() == 'top_three') {
+        $is_first = true; 
+        foreach($view->result as &$result) {
+         	$image_fields = $result->_entity->get('field_blog_image')->getValue()[0];
+            if ($is_first) {
+            	$is_first = false;
+                $image_fields['width'] = "480";
+                $image_fields['height'] = "480";     
+            } else {
+                $image_fields['width'] = "200";
+                $image_fields['height'] = "200";
+            }
+            $result->_entity->set('field_blog_image', array($image_fields));
+        }
+    }
+}
+

@@ -1,0 +1,23 @@
+tableform.table:
+  path: '/table-form'
+  defaults:
+    _form: '\Drupal\tableform\Form\TableFormController'
+    _title: 'Table Form'
+  requirements:
+    _permission: 'administer site configuration'
+
+tableform.publish:
+  path: '/node/{node}/publish'
+  defaults:
+    _controller: '\Drupal\tableform\Controller\Publish::publish'
+    _title: 'Publish Table Form'
+  requirements:
+    _permission: 'administer site configuration'
+
+tableform.unpublish:
+  path: '/node/{node}/unpublish'
+  defaults:
+    _controller: '\Drupal\tableform\Controller\Unpublish::unpublish'
+    _title: 'Unpublish Table Form'
+  requirements:
+    _permission: 'administer site configuration'
